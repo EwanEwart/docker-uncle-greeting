@@ -6,23 +6,23 @@ FROM golang:latest
 
 # 2.
 # Copy files and folders from local system onto the docker image.
-ADD . /go/src/hello
+ADD . /go/src/docker-uncle-greeting
 
 # 3.
 # Create an executable binary for our project 
 # with the command "go install"
-RUN go install hello
+RUN go install docker-uncle-greeting
 
 # 4.
 # The environment variable NAME
-# will be picked up by the program 'hello'
+# will be picked up by the program 'docker-uncle-greeting'
 # and printed to the console.
 ENV NAME Keir
 
 # 5.
 # The command to execute,
 # when the container is started.
-ENTRYPOINT /go/bin/hello
+ENTRYPOINT /go/bin/docker-uncle-greeting
 
 # 6.
 # Generally used for network applications.

@@ -15,6 +15,8 @@ import (
 )
 
 func main() {
+	fmt.Printf("This program's binary → %v\n",os.Args[0])
+
 	// fmt.Println(os.Getenv("NAME") + " is your uncle.")
 	fmt.Printf("%v is your uncle.\n",os.Getenv("NAME"))
 }

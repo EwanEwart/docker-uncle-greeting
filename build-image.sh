@@ -11,12 +11,12 @@ docker rmi -f `docker images -q -f dangling=true`
 
 echo "→ Build an image from a Dockerfile"
 echo "→ Usage:  docker build [OPTIONS] PATH | URL | -"
-docker build . -t "hello-uncle"
+docker build . -t "docker-uncle-greeting"
 
 echo "→ Run"
 echo "→ Raw-Run"
 NAME=Andreas ./main.go
 
 echo "→ Container-Run"
-docker run hello-uncle
-docker run -e NAME=Andreas hello-uncle
+docker run docker-uncle-greeting
+docker run -e NAME=Andreas docker-uncle-greeting
